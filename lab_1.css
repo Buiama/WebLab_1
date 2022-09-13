@@ -129,3 +129,9 @@ ol.vegetables-list {
     transform: rotate(90deg);
     color: red;
 }
+.icon {
+	min-height: 50%;
+	min-width:  15vw;
+	max-height: 50%;
+	max-width:  15vw;
+}
