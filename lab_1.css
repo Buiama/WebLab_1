@@ -1,41 +1,47 @@
-body {
-	margin: 0;
-	font-family: Vernanda;
-	font-size: 2vh;
-	text-align: right;
-}
-
 ::selection {
   color: red;
   background: gold;
 }
-header, footer {
+body {
+	display: table;
+	min-height: 100vh;
+	margin: 0;
+	text-align: right;
+	font-family: Vernanda;
+	font-size: 2vh;
+}
+
+header {
+	display: table-header-group;
+}
+.theadfoot {
 	height: 20vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
 	background: linear-gradient(to right, #6DABE8, #ACE7FF, #6DABE8);
 	background-repeat: no-repeat;
-	justify-content: space-between;
+}
+.headfoot, .first {
+	display: table-cell;
+	height: 20vh;
+	vertical-align: middle;
+	overflow-wrap: break-word;
 }
 .headfoot {
+	width: 55vw;
+}
+.hf {
+	min-width: 20%;
+	max-width: 36.5%;
 	margin-left: 3vw;
+	padding-top: 0.1vh;
+	padding-bottom: 0.1vh;
 	padding-right: 1vw;
 	padding-left: 1vw;
-	min-width: 20%;
-	height: 10vh;
 	background-color: #ACE7FF;
-	overflow: hidden;
 }
-.foot {
-	text-align: left;
-}
-main {
-	height: 60vh;
-	width: 100vw;
+.first {
+	width: 45vw;
 }
 p {
-	margin: 0;
 	margin-left: 1vw;
 	margin-right: 1vw;
 }
@@ -44,70 +50,71 @@ p:first-letter {
 	font-size: 3.5vh;
 	font-family: "Arial";
 }
-.left {
-	width: 70vw;
-	float: left;
+
+main {
+	display: table-row-group;
+	width: 100vw;
+	background-color: #A3E6BE;
 }
-.right {
-	width: 30vw;
-	height: 60vh;
-	float: right;
-	color: white;
-	background-color: #568CC7;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+.left, .right {
+	display: table-cell;
 }
 .top {
+	display: table-row;
+}
+.second, .third {
+	display: table-cell;
 	height: 45vh;
-}
-.bottom {
-	height: 15vh;
-	background-color: #A3E6BE;
-	display: flex;
-	align-items: center;
-	text-align: left;
-	overflow: hidden;
-}
-.first {
-	margin-left: 30%;
-	max-height: 100%;
-	overflow: hidden;
+	width: 70vw;
+	vertical-align: middle;
+	overflow-wrap: break-word;
 }
 .second {
-	float: left;
 	width: 30%;
-	height: 100%;
 	background-color: navajowhite;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: right;
+	overflow-wrap: break-word;
 }
 .third {
-	float: right;
-	width: 70%;
-	height: 100%;
 	background-color: lightgray;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
 }
+.right {
+	height: 60vh;
+	width: 30vw;
+	vertical-align: middle;
+	color: white;
+	background-color: #568CC7;
+	overflow-wrap: break-word;
+}
+.bottom {
+	display: table;
+	height: 15%;
+	width: 70vw;
+	vertical-align: middle;
+	text-align: left;
+	background-color: #A3E6BE;
+	overflow-wrap: break-word;
+}
+footer {
+	display: table-footer-group;
+}
+.foot {
+	text-align: left;
+}
+
 .link {
 	margin-right: 2vw;
 	padding: 1vh;
+	line-height: 3;
 	border-radius: 10vh;
 	transition-duration: 0.5s;
 }
 .link:hover {
-	background: violet;
 	color: white;
+	background: violet;
 }
 .link:focus {
-	background: darkviolet;
 	color: white;
+	background: darkviolet;
 }
 ol.fruits-list {
 	color: indigo;
@@ -118,6 +125,7 @@ ol.vegetables-list {
 	font-weight: normal;
 }
 .tmpS {
+	float: right;
 	text-align: left;
 }
 [href*="https:"] { color: darkgreen; }
@@ -130,6 +138,29 @@ ol.vegetables-list {
     color: red;
 }
 .icon {
-	height: 50%;
+	height: 60%;
 	width:  15vw;
+	float: right;
 }
+/*
+<body>
+	<table style="border: solid black 2px">
+		<thead>
+			<th colspan="3">1</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2</td>
+				<td>3</td>
+				<td rowspan="2">4</td>
+			</tr>
+			<tr>
+				<td colspan="2">5</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<th colspan="3">6</th>
+		</tfoot>
+	</table>
+</body>
+*/
