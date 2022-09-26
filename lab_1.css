@@ -131,6 +131,7 @@ ol.vegetables-list {
 [href*="https:"] { color: darkgreen; }
 [target] {color: darkgreen;}
 [href$="google.com"] { color: #667; }
+[href*="buiama.github.io"] { color: royalblue; }
 [target]::after {
     content: '\21F1';
     display: inline-block;
